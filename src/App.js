@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import { axiosReq } from "./api/axiosDefaults";
 import PostsPage from "./pages/posts/PostsPage";
 import { useCurrentUser } from "./contexts/CurrentUserContext";
+import PostEditForm from "./pages/posts/postEditForm";
 
 function App() {
   const {id} = useParams();
@@ -71,6 +72,7 @@ function App() {
           <Route exact path="/signup" render={() => <SignUpForm />} />
           <Route exact path="/posts/create" render={() => <PostCreateForm />} />
           <Route exact path="/posts/:id" render={() => <PostPage />} />
+          <Route exact path="/posts/:id/edit" render={() => <PostEditForm />} />
           <Route render={() => <h1>Page not found!</h1>} />
         </Switch>
       </Container>
