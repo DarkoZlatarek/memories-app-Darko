@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { axiosReq } from "../../api/axiosDefaults";
-import Asset from "../../components/Asset"
+import Asset from "../../components/Asset";
 
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
