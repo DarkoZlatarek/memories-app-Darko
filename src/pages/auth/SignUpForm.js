@@ -18,7 +18,7 @@ import axios from "axios";
 import { useRedirect } from "../../hooks/useRedirect";
 
 const SignUpForm = () => {
-  useRedirect("loggedIn")
+  useRedirect("loggedIn");
   const [signUpData, setSignUpData] = useState({
     username: "",
     password1: "",
@@ -83,7 +83,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.password1?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert key={idx} variant="warning">
                 {message}
               </Alert>
             ))}
@@ -100,7 +100,7 @@ const SignUpForm = () => {
               />
             </Form.Group>
             {errors.password2?.map((message, idx) => (
-              <Alert variant="warning" key={idx}>
+              <Alert key={idx} variant="warning">
                 {message}
               </Alert>
             ))}
@@ -112,12 +112,13 @@ const SignUpForm = () => {
               Sign up
             </Button>
             {errors.non_field_errors?.map((message, idx) => (
-              <Alert variant="warning" key={idx} className="mt-3">
+              <Alert key={idx} variant="warning" className="mt-3">
                 {message}
               </Alert>
             ))}
           </Form>
         </Container>
+
         <Container className={`mt-3 ${appStyles.Content}`}>
           <Link className={styles.Link} to="/signin">
             Already have an account? <span>Sign in</span>
